@@ -1,6 +1,75 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void loopexample1()
+{
+   int i=0;
+  while( i <=10 ){
+    printf("%d \n",i);
+    i++;
+  }
+
+}
+
+
+void loopexample2()
+{
+   int i=1; //s1
+  while( i <11 ){ //s2
+    printf("%d \n",i);
+    i++; //s3
+  }
+
+}
+
+void loopexample3(){
+    int i=0; //s1
+    do{
+       printf("%d \n",i);
+       i++;
+
+    }while(i<10);
+
+}
+
+
+void loopexample4(){
+    int i=101; //s1
+    do{
+       printf("%d \n",i);
+       i = i+2;
+    }while(i<100);
+
+}
+
+void loopexample5(){
+    for(int i=0;i<=10;i++){
+        printf("%d \n",i);
+    }
+}
+
+
+void loopexample6(){
+    for(int i=1;i<=3;i++){ //outer 3*10
+
+        for(int j=1; j<=10;j++ ){ //inner loop
+
+            printf("%d\t", i*j);
+
+        }
+        printf("\n");
+
+    }
+
+}
+
+void loopexample7(){
+ for(;;){
+
+    printf("Infinity stone fire \n");
+ }
+}
+
 int Decision_1(){
     int a;
     printf("Type a Value : ");
@@ -171,6 +240,31 @@ int problem04(){
     printf("invalid Operation");
  }
 
+
+} 
+
+int problem05(){
+   int a =10;
+   int b=20;
+   int temp;
+   printf("value of a, b - %d,%d \n",a,b);
+   temp = a;
+   a = b;
+   b = temp;
+   printf("value of a, b after swaping - %d,%d \n",a,b);
+
+}
+
+int problem06(){
+    int number;
+    printf("Enter a value : \n") ;
+    scanf("%d",&number);
+    if(number >=0){
+        printf("given number is positive");
+    }
+    else{
+       printf("given number is Negative");
+    }
 
 }
 
