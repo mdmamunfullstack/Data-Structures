@@ -255,18 +255,122 @@ int problem05(){
 
 }
 
+int problem05(){
+   int a =10;
+   int b=20;
+   int temp;
+   printf("value of a, b - %d,%d \n",a,b);
+   temp = a;
+   a = b;
+   b = temp;
+   printf("value of a, b after swaping - %d,%d \n",a,b);
+
+}
+
 int problem06(){
     int number;
     printf("Enter a value : \n") ;
     scanf("%d",&number);
-    if(number >=0){
+    if(number ==0){
+         printf("given number is 0");
+    }
+    else if(number >0){
         printf("given number is positive");
     }
+
     else{
        printf("given number is Negative");
     }
 
 }
+
+
+void pointerexample1(){
+    int x;
+    int *pointer;
+    x=10;
+    pointer=&x;
+
+    printf("value of x : %d \n",x);
+    printf("value of pointer : %d\n",pointer);
+
+
+    printf("Address of x : %d \n",&x);
+    printf("Address of pointer : %d \n",&pointer);
+    printf("Content of pointer : %d\n",*pointer);
+}
+
+
+void pointerexample2(){
+    char *cp, ch;
+    int *ip, i;
+    float *fp, f;
+    double *dp, d;
+
+
+    cp = &ch;
+    ip = &i;
+    fp = &f;
+    dp = &d;
+
+    printf("%p %p %p %p", cp, ip, fp,dp);
+
+    cp++;
+    ip++;
+    fp++;
+    dp++;
+
+    printf("\n");
+     printf("%p %p %p %p", cp, ip, fp,dp);
+
+}
+
+
+void pointerexample3(){
+    int x;
+    int *pointer;
+    x=10;
+    pointer=&x;
+
+    (*pointer)++;
+    printf("value of x : %d \n",x);
+    printf("value of pointer : %d\n",pointer);
+
+
+    printf("Address of x : %d \n",&x);
+    printf("Address of pointer : %d \n",&pointer);
+    printf("Content of pointer : %d\n",*pointer);
+}
+
+
+int countStringLength(){
+
+ //printf("Enter a string");
+  char stringName[] ="abcde";
+  int i;
+  for( i=0; stringName[i]!='\0';i++ ){
+    printf("%d \n",i);
+    printf("i is %c \n",stringName[i]);
+  }
+  printf("string length is %d \n", i);
+  return i;
+
+}
+
+
+int countStringLength2(){
+
+ //printf("Enter a string");
+  char stringName[] ="abcde";
+  int i;
+  for( i=0; stringName[i]!='\0';i++ );
+
+
+  printf("string length is %d \n", i);
+  return i;
+
+}
+
 
 int main()
 {
@@ -278,7 +382,9 @@ int main()
    //problem_01();
    //problem_02();
   //problem03();
-  problem04();
+//problem05();
+    //problem06();
+    countStringLength();
     return 0;
 
 }
